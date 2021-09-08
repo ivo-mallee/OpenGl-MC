@@ -1,0 +1,4 @@
+C:\Users\ivo\Downloads\opengl-tutorials-main\opengl-tutorials-main\YoutubeOpenGL 8 - Camera\x64\Debug\YoutubeOpenGL.exe
+C:\Users\ivo\Downloads\opengl-tutorials-main\opengl-tutorials-main\YoutubeOpenGL 8 - Camera\x64\Debug\YoutubeOpenGL.pdb
+C:\Users\ivo\Documents\visual studio solutions\YoutubeOpenGL 8 - Camera\x64\Debug\YoutubeOpenGL.exe
+C:\Users\ivo\Documents\visual studio solutions\YoutubeOpenGL 8 - Camera\x64\Debug\YoutubeOpenGL.pdb

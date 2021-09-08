@@ -1,0 +1,138 @@
+// Vertices coordinates
+						//  X  Y
+	/*{ //     COORDINATES     /        COLORS      /   TexCoord  //
+	    1.0f,1.0f, 1.0f,      0.0f, 0.0f, 0.0f,	TOP.maxX, TOP.minY,  // TOP
+	   -1.0f,1.0f, 1.0f,      0.0f, 0.0f, 0.0f,	TOP.minX, TOP.minY,  // TOP
+		1.0f,1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	TOP.maxX, TOP.MaxY,  // TOP
+	   -1.0f,1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	TOP.minX, TOP.MaxY,  // TOP
+
+	    1.0f,1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	FRONT.minX, FRONT.MaxY,  // Front Face
+	   -1.0f,1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	FRONT.maxX, FRONT.MaxY,  // Front Face
+	   1.0f,-1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	FRONT.minX, FRONT.minY,  // Front Face
+	   -1.0f,-1.0f, -1.0f,     0.0f, 0.0f, 0.0f,FRONT.maxX, FRONT.minY,  //  Front Face X
+
+	  -1.0f,-1.0f, 1.0f,     0.0f, 0.0f, 0.0f,	BOTTON.minX, BOTTON.MaxY,  // bottom X
+	   1.0f,-1.0f, 1.0f,     0.0f, 0.0f, 0.0f,	BOTTON.maxX, BOTTON.MaxY,  // bottom X
+	  - 1.0f,-1.0f, -1.0f,    0.0f, 0.0f, 0.0f,	BOTTON.minX, BOTTON.minY,  // bottom X
+	   1.0f,-1.0f, -1.0f,    0.0f, 0.0f, 0.0f,  BOTTON.maxX, BOTTON.minY,  //  bottom X
+
+	   -1.0f,1.0f, 1.0f,    0.0f, 0.0f, 0.0f,	BACK.minX, BACK.MaxY,  //back X
+	   1.0f,1.0f, 1.0f,     0.0f, 0.0f, 0.0f,	BACK.maxX, BACK.MaxY,  // Back X
+	  -1.0f,-1.0f, 1.0f,    0.0f, 0.0f, 0.0f,	BACK.minX, BACK.minY,  // Back X
+	   1.0f,-1.0f, 1.0f,    0.0f, 0.0f, 0.0f,   BACK.maxX, BACK.minY,  //  Back X
+
+	   1.0f,1.0f, 1.0f,     0.0f, 0.0f, 0.0f,	LEFT.minX, LEFT.MaxY, //left X
+	   1.0f,1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	LEFT.maxX, LEFT.MaxY,  // left X
+	   1.0f,-1.0f, 1.0f,    0.0f, 0.0f, 0.0f,	LEFT.minX, LEFT.minY,  // left X
+	   1.0f,-1.0f, -1.0f,    0.0f, 0.0f, 0.0f,  LEFT.maxX, LEFT.minY,   // left X
+
+	   -1.0f,1.0f, -1.0f,     0.0f, 0.0f, 0.0f,	RIGHT.minX, RIGHT.MaxY,   //right X
+	   -1.0f,1.0f, 1.0f,     0.0f, 0.0f, 0.0f,	RIGHT.maxX, RIGHT.MaxY,  // right X
+	   -1.0f,-1.0f, -1.0f,    0.0f, 0.0f, 0.0f,	RIGHT.minX, RIGHT.minY,  // right X
+	   -1.0f,-1.0f,  1.0f,    0.0f, 0.0f, 0.0f, RIGHT.maxX, RIGHT.minY,  // right X
+
+	}; */
+	
+   /*
+	int offset = 0;
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = 1.0f; //coordinates  //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS	      //
+	vertices[offset + 6] = TOP.maxX; vertices[offset + 7] = TOP.minY; //tex coords						  //
+	offset += 8;																						  //
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = 1.0f; //coordinates // T
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		  // O
+	vertices[offset + 6] = TOP.minX; vertices[offset + 7] = TOP.minY; //tex coords						  // P
+	offset += 8;																						  //
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = -1.0f; //coordinates //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		  //
+	vertices[offset + 6] = TOP.maxX; vertices[offset + 7] = TOP.MaxY; //tex coords						  //
+	offset += 8;																					      //
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = -1.0f; //coordinates//
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		  //
+	vertices[offset + 6] = TOP.minX; vertices[offset + 7] = TOP.MaxY; //tex coords						  //
+
+	offset += 8;
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = -1.0f; //coordinates     //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS	          //
+	vertices[offset + 6] = FRONT.minX; vertices[offset + 7] = FRONT.MaxY; //tex coords						  //
+	offset += 8;																						      // F
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = -1.0f; //coordinates    // R
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		      // O
+	vertices[offset + 6] = FRONT.maxX; vertices[offset + 7] = FRONT.MaxY; //tex coords						  // N
+	offset += 8;																						      // T
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = -1.0f; //coordinates    //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		      //
+	vertices[offset + 6] = FRONT.minX; vertices[offset + 7] = FRONT.minY; //tex coords						  //
+	offset += 8;																					          //
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = -1.0f; //coordinates   //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		      //
+	vertices[offset + 6] = FRONT.maxX; vertices[offset + 7] = FRONT.minY; //tex coords						  //
+
+	offset += 8;
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = 1.0f; //coordinates    //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS	          //
+	vertices[offset + 6] = BOTTON.minX; vertices[offset + 7] = BOTTON.MaxY; //tex coords				      //
+	offset += 8;																						      // B
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] =  1.0f; //coordinates    // O
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		      // T
+	vertices[offset + 6] = BOTTON.maxX; vertices[offset + 7] = BOTTON.MaxY; //tex coords					  // T
+	offset += 8;																						      // O
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = -1.0f; //coordinates   // M
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		      //
+	vertices[offset + 6] = BOTTON.minX; vertices[offset + 7] = BOTTON.minY; //tex coords				      //
+	offset += 8;																					          //
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = -1.0f; //coordinates    //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		      //
+	vertices[offset + 6] = BOTTON.maxX; vertices[offset + 7] = BOTTON.minY; //tex coords				      //
+	
+	offset += 8;
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = 1.0f; //coordinates      //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS	           //
+	vertices[offset + 6] = BACK.minX; vertices[offset + 7] = BACK.MaxY; //tex coords				           //
+	offset += 8;																						       // B
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = 1.0f; //coordinates       // a
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       // c
+	vertices[offset + 6] = BACK.maxX; vertices[offset + 7] = BACK.MaxY; //tex coords					       // k
+	offset += 8;																						       // 
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] =  1.0f; //coordinates    // 
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       //
+	vertices[offset + 6] = BACK.minX; vertices[offset + 7] = BACK.minY; //tex coords				           //
+	offset += 8;																					           //
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = 1.0f; //coordinates      //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       //
+	vertices[offset + 6] = BACK.maxX; vertices[offset + 7] = BACK.minY; //tex coords				           //
+
+	offset += 8;
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = 1.0f; //coordinates      //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS	           //
+	vertices[offset + 6] = LEFT.minX; vertices[offset + 7] = LEFT.MaxY; //tex coords				           //
+	offset += 8;																						       // L
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = -1.0f; //coordinates      // E
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       // F
+	vertices[offset + 6] = LEFT.maxX; vertices[offset + 7] = LEFT.MaxY; //tex coords					       // T
+	offset += 8;																						       // 
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = 1.0f; //coordinates      // 
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       //
+	vertices[offset + 6] = LEFT.minX; vertices[offset + 7] = LEFT.minY; //tex coords				           //
+	offset += 8;																					           //
+	vertices[offset + 0] = 1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = -1.0f; //coordinates     //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       //
+	vertices[offset + 6] = LEFT.maxX; vertices[offset + 7] = LEFT.minY; //tex coords				           //
+
+	offset += 8;
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = -1.0f; //coordinates     //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS	           //
+	vertices[offset + 6] = RIGHT.minX; vertices[offset + 7] = RIGHT.MaxY; //tex coords				           //
+	offset += 8;																						       // r
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = 1.0f; vertices[offset + 2] = 1.0f; //coordinates      // i
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       // g
+	vertices[offset + 6] = RIGHT.maxX; vertices[offset + 7] = RIGHT.MaxY; //tex coords					       // h
+	offset += 8;																						       // t
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = -1.0f; //coordinates    // 
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       //
+	vertices[offset + 6] = RIGHT.minX; vertices[offset + 7] = RIGHT.minY; //tex coords				           //
+	offset += 8;																					           //
+	vertices[offset + 0] = -1.0f; vertices[offset + 1] = -1.0f; vertices[offset + 2] = 1.0f; //coordinates     //
+	vertices[offset + 3] = 0.0f; vertices[offset + 4] = 0.0f; vertices[offset + 5] = 0.0f; //COLORS		       //
+	vertices[offset + 6] = RIGHT.maxX; vertices[offset + 7] = RIGHT.minY; //tex coords				           //
+	*/ 
